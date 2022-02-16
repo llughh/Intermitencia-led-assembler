@@ -1,6 +1,6 @@
 
 /*
-------------------Intermintencia AUDI-----------------------------
+------------------Intermintencia -----------------------------
 */
 ser r16
 out ddrd, r16 ; inicializar puerto d como salida
@@ -40,10 +40,10 @@ rjmp main
 */
 
 /******************************************
-        Funci髇 Delay 50ms
+        Funci贸n Delay 50ms
 ******************************************/
 funcionDelay50ms:
-        push r18                ;debuelvo a los registros 18,19,20 la informaci髇 que ten韆n
+        push r18                ;debuelvo a los registros 18,19,20 la informaci贸n que ten铆an
         push r19
         push r20
  
@@ -57,17 +57,17 @@ L1: dec  r20
     dec  r18
     brne L1
  
-        pop r20                 ;quito a los registros 18,19,20 la informaci髇 que ten韆n (se quita no se borra)
+        pop r20                 ;quito a los registros 18,19,20 la informaci贸n que ten铆an (se quita no se borra)
         pop r19
         pop r18
-        ret                             ;vuelvo al c骴igo
+        ret                             ;vuelvo al c贸digo
         ;fin delay 50ms
  
 /******************************************
-        Funci髇 Delay 1sec
+        Funci贸n Delay 1sec
 ******************************************/
 funcionDelay1000ms:
-        push r18                ;debuelvo a los registros 18,19,20 la informaci髇 que ten韆n
+        push r18                ;debuelvo a los registros 18,19,20 la informaci贸n que ten铆an
         push r19
         push r20
  
@@ -81,17 +81,17 @@ L2: dec  r20
     dec  r18
     brne L2
  
-        pop r20                 ;quito a los registros 18,19,20 la informaci髇 que ten韆n (se quita no se borra)
+        pop r20                 ;quito a los registros 18,19,20 la informaci贸n que ten铆an (se quita no se borra)
         pop r19
         pop r18
-        ret                             ;vuelvo al c骴igo
+        ret                             ;vuelvo al c贸digo
         ;fin delay 1sec
  
 /******************************************
-        Funci髇 Delay 1min
+        Funci贸n Delay 1min
 ******************************************/
 funcionDelay1min:
-        push r20                ;debuelvo a los registros 18,19,20 la informaci髇 que ten韆n
+        push r20                ;debuelvo a los registros 18,19,20 la informaci贸n que ten铆an
         push r21
         push r22
 		push r23
@@ -111,8 +111,8 @@ L3: dec  r23
     rjmp PC+1
  
 		pop r23
-        pop r22               ;quito a los registros 18,19,20 la informaci髇 que ten韆n (se quita no se borra)
+        pop r22               ;quito a los registros 18,19,20 la informaci贸n que ten铆an (se quita no se borra)
         pop r21
         pop r20
-        ret                             ;vuelvo al c骴igo
+        ret                             ;vuelvo al c贸digo
         ;fin delay 500ms
