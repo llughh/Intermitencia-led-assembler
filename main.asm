@@ -10,17 +10,17 @@ out ddrd, r16 ; inicializar puerto d como salida
 */
 main:
 	;desplazamiento izquierda
-	ldi r16, 1
+	ldi r16, 1	//inicializar a 1 
 	repetir: 
-		out portd, r16
+		out portd, r16	//mandar el registro al puerto d
 
 		call funcionDelay50ms	
 
 		//mov r15, r16
 		//add r16, r15
-		lsl r16
-		inc r16
-		cpi r16,255
+		lsl r16	//desplazar el valor a la izquierda	
+		inc r16	//añadir un uno a la derecha del todo
+		cpi r16,255	//comprobar si no tiene el valor maximo, si lo tiene salta la sigueinte linea
 		brne repetir
 	
 	; apagar leds Funciona el apagado
@@ -28,7 +28,7 @@ main:
 
 	call funcionDelay1000ms
 
-	clr r16
+	clr r16	//limpiar el registro 16 para volverlo a usar
 		out portd, r16
 
 		call funcionDelay1000ms
